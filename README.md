@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+Fins a dia d'avui hem anat desenvolupant poc a poc una aplicació per poder assolir objectius mitjançant un calendari.
+Com recordeu l'enunciat deia que voliem poder introduïr quantes hores necessitem per poder assolir un objectiu, i durant la setmana quantes hores hi dedicariem per treballar-hi en aquests. L'aplicació ens hauria de dir quin dia tindriem l'objectiu assolit.
+Llavors volem una aplicació en la que poder indicar les hores que hi dedicarem cada dia de la setmana, quina és la data d'inici, i si hi han dies que sabem que no podrem treballar en l'objectiu (per exemple fem un viatge, estem malalts).
+Per altra banda la propia aplicació hauria de saber quins dies són festius per tal de contar que aquells dies no treballaràs en l'objectiu, de forma automàtica.
+Recordeu que volem aquesta aplicació en ReactJS, que s'ha de fer servir el patró MVVM, les dades de festius han de sortir d'una crida a una API (proposades per vosaltres o fins i tot creades per vosaltres amb Flask. Aquesta última és tindria molt en compte). A banda també s'han d'entregar els jocs de proves que heu fet servir per tal de saber si el que entregareu funciona o no (recordeu fer proves mínimament complexes per tal d'asegurar una aplicació robusta).
+De forma individual us demanaré que entregueu una millora o extra que serà diferent per cadascun i serà el gruix de la nota.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+URLs:
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    /                                 ======> ha de mostrar el dia actual, quin percentatge de cada objectiu actiu
+    /new-objective                    ======> formulari per un nou objectiu, a la data inicial per defecte data actual
+    /edit-objective/{id-objective}    ======> pàgina per editar un objectiu
+    /delete-objective/{id-objective}  ======> elimina un objectiu i retorna a la pàgina /
+    /show-objective/{id-objective}    ======> mostrar les dades d'un objectiu, inici, final i percentatge.
