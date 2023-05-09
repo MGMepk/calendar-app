@@ -17,17 +17,22 @@ function useHomeViewModel() {
     setDate(now.toLocaleDateString());
   }, [date]);
 
-  // get data festivos from API using axios
+  // get data festivos from API using Fetch;
   useEffect(() => {
     const getFestivos = async () => {
-      fetch('https://date.nager.at/api/v3/PublicHolidays/2023/ES')
-      .then(response => response.json())
-      .then(data => {
-        const barcelonaHolidays = data.filter(holiday => holiday.counties != null || holiday.counties.includes('ES-CT'));
-        setFestivos(JSON.stringify(barcelonaHolidays));
-        localStorage.setItem("festivos", JSON.stringify(barcelonaHolidays));
-        console.log(barcelonaHolidays);
-      });
+      if (localStorage.getItem("festivos") === null) {
+        fetch("https://date.nager.at/api/v3/PublicHolidays/2023/ES")
+          .then((response) => response.json())
+          .then((data) => {
+            const barcelonaHolidays = data.filter(
+              (holiday) =>
+                holiday.counties === null || holiday.counties.includes("ES-CT")
+            );
+            setFestivos(JSON.stringify(barcelonaHolidays));
+            localStorage.setItem("festivos", JSON.stringify(barcelonaHolidays));
+            console.log(barcelonaHolidays);
+          });
+      }
     };
     getFestivos();
   }, []);

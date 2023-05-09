@@ -1,8 +1,9 @@
+import "../css/calendar.css";
 import { Link, Outlet } from "react-router-dom";
 
 function Layout() {
   return (
-    <div>
+    <div id="navigator">
       <nav>
         <ul>
           <li>

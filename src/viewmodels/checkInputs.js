@@ -5,43 +5,44 @@ export default function checkInputs(model) {
   } else if (model.totalHoras <= 0) {
     alert("El campo 'Total de horas' debe ser mayor que cero.");
     return;
-  }
-
-  // Verificar si el campo "fechaInicio" es una fecha válida
-  else if (!model.fechaInicio) {
+  } else if (!model.fechaInicio) {
     alert("El campo 'Fecha de inicio' es obligatorio.");
     return;
-  }
-
-  // Verificar que los dias tengan al menos uno el valor de 1 los demas pueden ser 0
-  else if (
+  } else if (
     (model.lunes !== undefined &&
       model.lunes !== null &&
       model.lunes !== "" &&
-      model.lunes < 1) ||
+      model.lunes < 0) ||
     (model.martes !== undefined &&
       model.martes !== null &&
       model.martes !== "" &&
-      model.martes < 1) ||
+      model.martes < 0) ||
     (model.miercoles !== undefined &&
       model.miercoles !== null &&
       model.miercoles !== "" &&
-      model.miercoles < 1) ||
+      model.miercoles < 0) ||
     (model.jueves !== undefined &&
       model.jueves !== null &&
       model.jueves !== "" &&
-      model.jueves < 1) ||
+      model.jueves < 0) ||
     (model.viernes !== undefined &&
       model.viernes !== null &&
       model.viernes !== "" &&
-      model.viernes < 1) ||
+      model.viernes < 0) ||
     (model.sabado !== undefined &&
       model.sabado !== null &&
       model.sabado !== "" &&
-      model.sabado < 1) ||
+      model.sabado < 0) ||
     (model.domingo !== undefined &&
       model.domingo !== null &&
       model.domingo !== "" &&
+      model.domingo < 0) ||
+    (model.lunes < 1 &&
+      model.martes < 1 &&
+      model.miercoles < 1 &&
+      model.jueves < 1 &&
+      model.viernes < 1 &&
+      model.sabado < 1 &&
       model.domingo < 1)
   ) {
     alert(

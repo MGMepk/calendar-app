@@ -1,11 +1,20 @@
 export default function calcularFechaFinal(model) {
-  const festivos = localStorage.getItem("festivos") ? JSON.parse(localStorage.getItem("festivos")) : []; 
+  const festivos = localStorage.getItem("festivos")
+    ? JSON.parse(localStorage.getItem("festivos"))
+    : [];
   const incidencias = model.incidencias ? Object.values(model.incidencias) : [];
   let fechaFinal = new Date(model.fechaInicio); //fecha final a calcular
   const fechaInicio = new Date(model.fechaInicio); //fecha inicio del objetivo
-  const horasPorDia = [      Number(model.lunes),      Number(model.martes),      Number(model.miercoles),      Number(model.jueves),      Number(model.viernes),      Number(model.sabado),      Number(model.domingo),    ]; //datos de horas por dia
+  const horasPorDia = [
+    Number(model.lunes),
+    Number(model.martes),
+    Number(model.miercoles),
+    Number(model.jueves),
+    Number(model.viernes),
+    Number(model.sabado),
+    Number(model.domingo),
+  ]; //datos de horas por dia
   const horasTotales = Number(model.totalHoras); //total de horas del objetivo
-  console.log("horas totales" + horasTotales);
 
   let diasTrabajados = 0;
   let horasAcumuladas = 0;
@@ -41,5 +50,4 @@ export default function calcularFechaFinal(model) {
   console.log("fecha final" + fechaFinal);
 
   return fechaFinal;
-
 }

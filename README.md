@@ -21,3 +21,7 @@ URLs:
     /edit-objective/{id-objective}    ======> pàgina per editar un objectiu
     /delete-objective/{id-objective}  ======> elimina un objectiu i retorna a la pàgina /
     /show-objective/{id-objective}    ======> mostrar les dades d'un objectiu, inici, final i percentatge.
+
+
+    Extra: Afegir un sistema de recordatoris de dates pròximes a finalitzar, quan entrem a l’aplicació ens 
+    ha de mostrar un missatge indicant si un objectiu està pròxim a finalitzar i el temps que hi falta.

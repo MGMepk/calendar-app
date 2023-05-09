@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 function Card({ model, final}) {
-  console.log("final desde card" + final.toLocaleDateString());
   return (
     <div key={model.id} className="card">
       <h2>{model.name}</h2>

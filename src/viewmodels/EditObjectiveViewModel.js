@@ -68,7 +68,6 @@ function useEditObjectiveViewModel() {
     setModel(newModel);
   };
 
-  //handle submit post the data to the API using  axios
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(e);
